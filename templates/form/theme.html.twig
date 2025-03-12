@@ -1,6 +1,6 @@
 {% block embedded_row %}
-    <p>I am <code>embedded_row</code>, here is my <code>block_prefixes</code></p>
-    <pre><code>{{ block_prefixes|json_encode }}</code></pre>
+    <p>I am <code style="color: darkblue">embedded_row</code>, here is my <code style="color: darkblue">block_prefixes</code></p>
+    <pre><code style="background: black; color: whitesmoke; padding: 5px">{{ block_prefixes|json_encode }}</code></pre>
     {{ form_row(form) }}
 {% endblock embedded_row %}
 
