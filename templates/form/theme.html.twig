@@ -1,0 +1,11 @@
+{% block embedded_row %}
+    <p>I am <code>embedded_row</code>, here is my <code>block_prefixes</code></p>
+    <pre><code>{{ block_prefixes|json_encode }}</code></pre>
+    {{ form_row(form) }}
+{% endblock embedded_row %}
+
+{% block collection_row %}
+    <div style="margin-left: 30px">
+        {{ form_row(form) }}
+    </div>
+{% endblock collection_row %}
