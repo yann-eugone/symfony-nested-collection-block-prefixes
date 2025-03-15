@@ -8,18 +8,16 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-final class TaskListType extends AbstractType
+final class TaskParentChoiceType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options = []): void
     {
-        $builder->add('tasks', CollectionType::class, [
-            'entry_type' => TaskType::class,
+        $builder->add('tags', CollectionType::class, [
+            'entry_type' => ParentChoiceType::class,
+            'entry_options' => [
+                'choices' => ['foo' => 'FOO', 'bar' => 'BAR', 'baz' => 'BAZ'],
+            ],
         ]);
-    }
-
-    public function getParent()
-    {
-        return EmbeddedType::class;
     }
 }
 

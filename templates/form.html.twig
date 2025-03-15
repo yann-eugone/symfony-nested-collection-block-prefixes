@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ form(form) }}
+    {% for name,form in forms %}
+        <h3>{{ name }}</h3>
+        {{ form(form) }}
+        <hr>
+    {% endfor %}
 {% endblock body %}
